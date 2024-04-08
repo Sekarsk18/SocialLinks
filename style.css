@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Inter";
+    src: url(Inter-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+:root{
+    
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);   
+    --Grey: hsl(0, 0%, 20%);
+    --DarkGrey: hsl(0, 0%, 12%);
+    --OffBlack: hsl(0, 0%, 8%);
+
+    --generalsize: 12px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--OffBlack);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--DarkGrey);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile span {
+    color: var(--White);
+    padding-block: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#location{
+    font-size: var(--generalsize);
+    font-weight: bold;
+    color: var(--Green);
+}
+
+#position {
+    font-size: var(--generalsize);
+    color: var(--White);
+    padding: 1.2rem 0 1rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.btn-group button {
+    height: 2.5rem;
+    font-size: var(--generalsize);
+    font-weight: 600;
+    color: var(--White);
+    background-color: var(--Grey);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-group button:hover {
+    background-color: var(--Green);
+    color: var(--OffBlack);
+}
+
+@media screen and (max-width:375px){
+    :root {
+        --generalsize: 13px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .profile span {
+        font-size: 1.4rem;
+    }
+}
